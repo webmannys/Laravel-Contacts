@@ -15,8 +15,8 @@
                     @endif
 
                     You are logged in!
-										
-										Contacts
+										<br /><br />
+										<a href="/contacts">Contacts</a>
                 </div>
             </div>
         </div>
