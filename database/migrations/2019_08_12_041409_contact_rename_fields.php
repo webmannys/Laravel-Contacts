@@ -16,6 +16,7 @@ class ContactRenameFields extends Migration
 			Schema::table('contacts', function(Blueprint $table) {
 					$table->renameColumn('First', 'First_Name');
 					$table->renameColumn('Last', 'Last_Name');
+					$table->renameColumn('Streeet', 'Street');
 			});
     }
 
@@ -29,6 +30,7 @@ class ContactRenameFields extends Migration
         Schema::table('contacts', function(Blueprint $table) {
             $table->renameColumn('First_Name', 'First');
             $table->renameColumn('Last_Name', 'Last');
+						$table->renameColumn('Street', 'Streeet');
         });
     }
 }
