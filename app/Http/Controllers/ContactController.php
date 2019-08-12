@@ -45,10 +45,10 @@ class ContactController extends Controller
 			$contact = new Contact([
 					'First' => $request->get('First'),
 					'Last' => $request->get('Last'),
-					'Street' => $request->get('Last'),
-					'City' => $request->get('Last'),
-					'State' => $request->get('Last'),
-					'Zip' => $request->get('Last'),
+					'Street' => $request->get('Street'),
+					'City' => $request->get('City'),
+					'State' => $request->get('State'),
+					'Zip' => $request->get('Zip'),
 					'Mobile_Phone' => $request->get('Mobile_Phone'),
 					'Home_Phone' => $request->get('Home_Phone')
 			]);
