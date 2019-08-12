@@ -24,7 +24,6 @@ Route::group(['middleware' => 'auth'], function () {
         return view('home');
    });
 
-   Route::get('/contacts', function () {
-        return view('contacts');
-   });
+	 Route::resource('contacts', 'ContactController');
+	 
 });
