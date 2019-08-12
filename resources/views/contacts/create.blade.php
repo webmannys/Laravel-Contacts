@@ -19,13 +19,13 @@
 					<form method="post" action="{{ route('contacts.store') }}">
 							@csrf
 							<div class="form-group">    
-									<label for="First">First Name:</label>
-									<input type="text" class="form-control" name="First"/>
+									<label for="First_Name">First Name:</label>
+									<input type="text" class="form-control" name="First_Name"/>
 							</div>
 
 							<div class="form-group">
-									<label for="Last">Last Name:</label>
-									<input type="text" class="form-control" name="Last"/>
+									<label for="Last_Name">Last Name:</label>
+									<input type="text" class="form-control" name="Last_Name"/>
 							</div>
 
 							<div class="form-group">

@@ -8,8 +8,8 @@ class Contact extends Model
 {
 	protected $fillable = [
 		'uid',
-		'First',
-		'Last',
+		'First_Name',
+		'Last_Name',
 		'Streeet',
 		'City',
 		'State',

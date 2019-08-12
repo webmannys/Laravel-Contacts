@@ -40,15 +40,15 @@ class ContactController extends Controller
     {
 			
 			$request->validate([
-					'First'=>'required',
-					'Last'=>'required',
+					'First_Name'=>'required',
+					'Last_Name'=>'required',
 					'Mobile_Phone'=>'required'
 			]);
 
 			$contact = new Contact([
 					'uid' => Auth::user()->id,
-					'First' => $request->get('First'),
-					'Last' => $request->get('Last'),
+					'First_Name' => $request->get('First_Name'),
+					'Last_Name' => $request->get('Last_Name'),
 					'Street' => $request->get('Street'),
 					'City' => $request->get('City'),
 					'State' => $request->get('State'),
