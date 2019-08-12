@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Contact;
 
+use Auth;
+
 class ContactController extends Controller
 {
     /**
@@ -36,6 +38,7 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
+			
 			$request->validate([
 					'First'=>'required',
 					'Last'=>'required',
@@ -43,6 +46,7 @@ class ContactController extends Controller
 			]);
 
 			$contact = new Contact([
+					'uid' => Auth::user()->id,
 					'First' => $request->get('First'),
 					'Last' => $request->get('Last'),
 					'Street' => $request->get('Street'),
@@ -52,6 +56,7 @@ class ContactController extends Controller
 					'Mobile_Phone' => $request->get('Mobile_Phone'),
 					'Home_Phone' => $request->get('Home_Phone')
 			]);
+			
 			$contact->save();
 			return redirect('/contacts')->with('success', 'Contact saved!');
     }
