@@ -17,7 +17,8 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+			$contacts = Contact::all();
+			return view('contacts.index', compact('contacts'));
     }
 
     /**
@@ -38,7 +39,6 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-			
 			$request->validate([
 					'First_Name'=>'required',
 					'Last_Name'=>'required',
