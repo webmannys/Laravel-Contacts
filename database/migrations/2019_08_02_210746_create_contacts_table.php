@@ -19,14 +19,22 @@ class CreateContactsTable extends Migration
 					$table->foreign('user_id')->references('id')->on('users');
 					$table->string('First_Name');
 					$table->string('Last_Name');
+					$table->string('Street');
+					$table->string('City');
+					$table->string('State');
+					$table->integer('Zip');
+					$table->string('Mobile_Phone');
+					$table->string('Home_Phone');
+					$table->timestamps();
+        });
+				
+				Schema::table('contacts', function (Blueprint $table) {
 					$table->string('Street')->nullable()->change();
 					$table->string('City')->nullable()->change();
 					$table->string('State')->nullable()->change();
-					$table->integer('Zip')->nullable()->change();
-					$table->string('Mobile_Phone');
+					$table->string('Zip')->nullable()->change();
 					$table->string('Home_Phone')->nullable()->change();
-					$table->timestamps();
-        });
+				});
 
     }
 
