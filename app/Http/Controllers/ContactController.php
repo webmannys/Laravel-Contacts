@@ -39,6 +39,8 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
+	    $user = Auth::user();
+			
 			$request->validate([
 					'First_Name'=>'required',
 					'Last_Name'=>'required',
@@ -46,7 +48,6 @@ class ContactController extends Controller
 			]);
 
 			$contact = new Contact([
-					'uid' => Auth::user()->id,
 					'First_Name' => $request->get('First_Name'),
 					'Last_Name' => $request->get('Last_Name'),
 					'Street' => $request->get('Street'),
@@ -57,7 +58,7 @@ class ContactController extends Controller
 					'Home_Phone' => $request->get('Home_Phone')
 			]);
 			
-			$contact->save();
+	    $user->contacts()->save($contact);
 			return redirect('/contacts')->with('success', 'Contact saved!');
     }
 

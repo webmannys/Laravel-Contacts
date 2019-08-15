@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Contact extends Model
 {
 	protected $fillable = [
-		'uid',
 		'First_Name',
 		'Last_Name',
 		'Streeet',
@@ -18,5 +17,7 @@ class Contact extends Model
 		'Home_Phone'		
 	];
 	
-	protected $guarded = ['uid'];
+	public function author() {
+    return $this->belongsTo('App\User', 'user_id');
+  }
 }
