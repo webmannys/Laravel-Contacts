@@ -17,7 +17,4 @@ class Contact extends Model
 		'Home_Phone'		
 	];
 	
-	public function author() {
-    return $this->belongsTo('App\User', 'user_id');
-  }
 }
