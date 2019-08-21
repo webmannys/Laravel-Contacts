@@ -82,7 +82,8 @@ class ContactController extends Controller
      */
     public function edit($id)
     {
-        //
+			$contact = Contact::find($id);
+			return view('contacts.edit', compact('contact'));  
     }
 
     /**
@@ -94,7 +95,25 @@ class ContactController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+			$request->validate([
+				'First_Name'=>'required',
+				'Last_Name'=>'required',
+				'Mobile_Phone'=>'required'
+			]);
+
+			$contact = Contact::find($id);
+			$contact->First_Name = $request->get('First_Name');
+			$contact->Last_Name = $request->get('Last_Name');
+			$contact->Street = $request->get('Street');
+			$contact->City = $request->get('City');
+			$contact->State = $request->get('State');
+			$contact->Zip = $request->get('Zip');
+			$contact->Mobile_Phone = $request->get('Mobile_Phone');
+			$contact->Home_Phone = $request->get('Home_Phone');
+					
+			$contact->save();
+
+			return redirect('/contacts')->with('success', 'Contact updated!');
     }
 
     /**
