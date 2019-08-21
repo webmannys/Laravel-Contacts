@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 	<div class="row justify-content-center">
-	 <div class="col-md-8">
+	 <div class="col">
 			<div class="card">
 				<h1 class="card-header">Contacts</h1>
 			<div class="card-body">
@@ -14,6 +14,10 @@
 					</div>
 				@endif
 	
+				<div>
+					<a style="margin: 19px;" href="{{ route('contacts.create')}}" class="btn btn-primary">New contact</a>
+				</div>  
+		
 				<table class="table table-striped">
 					<thead>
 							<tr>
