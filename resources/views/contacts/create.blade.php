@@ -50,7 +50,7 @@
 							</div>     
 							<div class="form-group">
 									<label for="Home_Phone">Home Phone:</label>
-									<input type="text" class="form-control" name="Home Phone"/>
+									<input type="text" class="form-control" name="Home_Phone"/>
 							</div>     							
 							<button type="submit" class="btn btn-primary-outline">Add contact</button>
 					</form>
