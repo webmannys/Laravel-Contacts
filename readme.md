@@ -1,11 +1,22 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+# Contact Manager written in Laravel
+Contact Manager with Users. User can register and login and manage their own contacts. Contacts are written into a single table reference by the user that created them.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+### Installing
+Copy or clone repo into your webhost directory<br />
+Configure your webhost files<br />
+Go to the webhost directory you cloned the repo and run ```composer install```<br/>
+Run ```cp .env.example .env``` to create environment file </br>
+Modify the .env file and update the database information:
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=homestead
+DB_USERNAME=homestead
+DB_PASSWORD=homestead
+```
+Save file and close <br />
+Run ```php artisan key:generate``` to generate the app keys.
 
 ## About Laravel
 
