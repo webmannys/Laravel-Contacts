@@ -7,6 +7,13 @@
 			<div class="card">
 				<h1 class="card-header">Contacts</h1>
 			<div class="card-body">
+			
+				@if(session()->get('success'))
+					<div class="alert alert-success">
+						{{ session()->get('success') }}  
+					</div>
+				@endif
+	
 				<table class="table table-striped">
 					<thead>
 							<tr>
