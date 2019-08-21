@@ -6,6 +6,7 @@ Copy or clone repo into your webhost directory<br />
 Configure your webhost files<br />
 Go to the webhost directory you cloned the repo and run ```composer install```<br/>
 Run ```cp .env.example .env``` to create environment file </br>
+Create your database and database user with priviledges to the database</br>
 Modify the .env file and update the database information:
 ```
 DB_CONNECTION=mysql
