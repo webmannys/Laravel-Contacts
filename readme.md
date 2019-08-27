@@ -17,7 +17,7 @@ DB_USERNAME=homestead
 DB_PASSWORD=homestead
 ```
 Save file and close <br />
-Run ```php artisan key:generate``` to generate the app keys.
+Run ```php artisan key:generate``` to generate the app keys.<br />
 Run ```php artisan migrate``` to create the DB tables.
 
 ## About Laravel
