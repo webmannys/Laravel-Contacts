@@ -28,37 +28,37 @@
 							@csrf
 							<div class="form-group">    
 									<label for="First_Name">First Name:</label>
-									<input type="text" class="form-control" name="First_Name" value={{ $contact->First_Name }} />
+									<input type="text" class="form-control" name="First_Name" value="{{ $contact->First_Name }}" />
 							</div>
 
 							<div class="form-group">
 									<label for="Last_Name">Last Name:</label>
-									<input type="text" class="form-control" name="Last_Name" value={{ $contact->Last_Name }} />
+									<input type="text" class="form-control" name="Last_Name" value="{{ $contact->Last_Name }}" />
 							</div>
 
 							<div class="form-group">
 									<label for="Street">Street:</label>
-									<input type="text" class="form-control" name="Street" value={{ $contact->Street }} />
+									<input type="text" class="form-control" name="Street" value="{{ $contact->Street }}" />
 							</div>
 							<div class="form-group">
 									<label for="City">City:</label>
-									<input type="text" class="form-control" name="City" value={{ $contact->City }} />
+									<input type="text" class="form-control" name="City" value="{{ $contact->City }}" />
 							</div>
 							<div class="form-group">
 									<label for="State">State:</label>
-									<input type="text" class="form-control" name="State" value={{ $contact->State }} />
+									<input type="text" class="form-control" name="State" value="{{ $contact->State }}" />
 							</div>
 							<div class="form-group">
 									<label for="Zip">Zip:</label>
-									<input type="text" class="form-control" name="Zip" value={{ $contact->Zip }} />
+									<input type="text" class="form-control" name="Zip" value="{{ $contact->Zip }}" />
 							</div>
 							<div class="form-group">
 									<label for="Mobile_Phone">Mobile Phone:</label>
-									<input type="text" class="form-control" name="Mobile_Phone" value={{ $contact->Mobile_Phone }} />
+									<input type="text" class="form-control" name="Mobile_Phone" value="{{ $contact->Mobile_Phone }}" />
 							</div>     
 							<div class="form-group">
 									<label for="Home_Phone">Home Phone:</label>
-									<input type="text" class="form-control" name="Home_Phone" value={{ $contact->Home_Phone }} />
+									<input type="text" class="form-control" name="Home_Phone" value="{{ $contact->Home_Phone }}" />
 							</div>     							
 							<button type="submit" class="btn btn-primary-outline">Update</button>
 					</form>
